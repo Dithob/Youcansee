@@ -1,0 +1,11 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Image understanding",
+      "description": "Read, OCR, describe, and ask questions about images.",
+      "skills": ["youcansee"]
+    }
+  ]
+}

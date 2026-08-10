@@ -41,8 +41,8 @@ npx skills add <owner>/<repo> --skill youcansee -a codex -a claude-code -y
 ### 本地验证安装
 
 ```bash
-npx skills add ./youcansee --list
-npx skills add ./youcansee --skill youcansee --copy -y
+npx skills add . --list
+npx skills add . --skill youcansee --copy -y
 ```
 
 > `npx skills add` 支持仓库、仓库子路径和本地 skill 路径。发布前请把 `<owner>/<repo>` 替换为实际 GitHub owner/repository。

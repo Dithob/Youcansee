@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouCanSee"
+  short_description: "Read, OCR, and describe images with fallback tiers"
+  default_prompt: "Use $youcansee to read, OCR, describe, or answer questions about an image when native vision is unavailable."

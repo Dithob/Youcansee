@@ -6,7 +6,11 @@ description: >-
   scripts/see_image.py helper, which supports an OpenAI-compatible vision API,
   four quality tiers (max/high/medium/low), per-tier provider failover, local
   VLMs, and Windows OCR. Triggers include 读图、看图、OCR、截图内容、图片描述、图片里是什么；
-  tier selectors include 最强神眼/全力/完全体/最高档、 高档、 中档/快速、 低档/本地/省钱/离线。
+  English triggers include read image、look at image、OCR、image text、screenshot content、
+  describe image、what is in this image、image question、visual question answering；
+  tier selectors include 最强神眼/全力/完全体/最高档/max、最强、天花板，
+  高档/high/stronger/clearer、 中档/medium/normal/quick/balanced、
+  低档/low/local/cheap/save money/offline/fast。
   Do not use this skill for image generation or editing.
 license: MIT
 ---
@@ -39,10 +43,10 @@ If the current model can reliably inspect the image natively, use that capabilit
 
 | Tier | Use when the user says | Behavior |
 |---|---|---|
-| `max` | 最强神眼、全力、完全体、最高档、最强、天花板 | Highest configured cloud/API tier; default when configured |
-| `high` | 高档、好一点、更清晰 | Stronger configured cloud/API tier |
-| `medium` | 中档、普通、快速、平衡 | Middle configured cloud/API tier |
-| `low` | 低档、本地、省钱、离线、快一点 | Local VLM first when configured; Windows OCR fallback on Windows |
+| `max` | 最强神眼、全力、完全体、最高档、最强、天花板; `max`, strongest, best quality, highest quality, top quality, maximum, full power | Highest configured cloud/API tier; default when configured |
+| `high` | 高档、好一点、更清晰; `high`, higher quality, better quality, clearer, more accurate, strong | Stronger configured cloud/API tier |
+| `medium` | 中档、普通、快速、平衡; `medium`, normal quality, standard quality, quick, fast, balanced | Middle configured cloud/API tier |
+| `low` | 低档、本地、省钱、离线、快一点; `low`, local, cheap, low cost, offline, fastest, save money | Local VLM first when configured; Windows OCR fallback on Windows |
 
 When no tier is specified, use `YOUCANSEE_DEFAULT_TIER`; otherwise choose the highest available configured tier in `max → high → medium → low` order.
 

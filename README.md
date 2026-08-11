@@ -1,5 +1,7 @@
 # youcansee
 
+[English](README.en.md) | [中文](README.md)
+
 一个可安装到多种 coding-agent 的多档位读图 / OCR skill。它在当前模型无法原生看图或原生视觉失败时，调用 `scripts/see_image.py`，通过 OpenAI-compatible vision API、可选本地 VLM，或 Windows OCR 获取图像证据。
 
 [![Skill](https://img.shields.io/badge/agent--skill-youcansee-2563eb)](SKILL.md)
@@ -103,6 +105,7 @@ python scripts/see_image.py /path/to/image.png --dry-run
 ```text
 youcansee/
 ├── SKILL.md
+├── README.en.md
 ├── agents/openai.yaml
 ├── scripts/see_image.py
 ├── scripts/ocr_windows.ps1
